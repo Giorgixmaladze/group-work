@@ -1,3 +1,8 @@
+
+*{
+    box-sizing: border-box;
+}
+
 @keyframes slideInFromTop {
     from {
         transform: translateY(-100%);
@@ -142,7 +147,7 @@ li:hover{
     flex: 1;
     text-align: center;
     animation: scaleUp 1s ease-in-out;
-    background-image: url(../images/fortune-vieyra-8fEMQytM2ik-unsplash.jpg);
+    background-image: url(images/fortune-vieyra-8fEMQytM2ik-unsplash.jpg);
     height: 100%;
     background-size: cover;
     border-radius: 15px;
@@ -302,43 +307,9 @@ li:hover{
     height: 24px;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-    }
 
-    .hero-content {
-        text-align: center;
-    }
 
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1rem;
-    }
-
-    .hero-image {
-        width: 100%;
-        height: 300px;
-    }
-
-    .trend {
-        flex-direction: column;
-    }
-
-    .trend-content {
-        margin-right: 0;
-        text-align: center;
-    }
-
-    .trend-content .buttons {
-        justify-content: center;
-    }
-}
-
+    
 footer {
     width: 100%;
     height: 300px;
@@ -391,7 +362,9 @@ form button {
     border-style: none;
     background-color: white;
     cursor: pointer;
+    transition: 0.25s;
 }
+
 
 #footer-content {
     display: flex;
@@ -433,4 +406,93 @@ form button {
 #icons i:hover {
     color: rgb(181, 181, 181);
     transform: scale(115%);
+}
+
+
+
+@media (max-width:1000px){
+    .logo{
+        width: 55%;
+    }
+
+    .logo img{
+        width: 35%;
+    }
+
+    .hero{
+        flex-direction: column;
+        height: 700px;
+    }
+    .hero-image{
+        width: 50%;
+        flex: 1.5;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    footer{
+        height: 80vh;
+        gap: 40px;
+    }
+    #footer-content{
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width:600px){
+
+
+    header{
+        flex-direction: column;
+    }
+    .logo{
+        width: 55%;
+        text-align: center;
+    }
+
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .new-products{
+        flex-direction: column;
+    }
+
+    .product-item img{
+        border-radius: 15px;
+    }
+
+    .trend{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+
+    .trend-images{
+        width: 70%;
+    }
+
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    footer{
+        height: 60vh;
+    }
 }
